@@ -137,16 +137,49 @@ This repository contains a comprehensive design for a working Latent Space OS:
    - Memory persistence tests
    - Reasoning chain demos
 
+### 🧪 Testing & Validation
+
+8. **[Test Suite Documentation](TESTING.md)** - Comprehensive testing guide
+   - Mathematical validation strategy
+   - Component integration tests
+   - Success criteria and benchmarks
+   - Debugging guide
+
+9. **Test Files** - Executable validation
+   - `test_math_validation.py` - 7 tests validating theoretical claims
+   - `test_component_integration.py` - 7 tests for system integration
+   - `run_tests.sh` - Master test runner
+
 ---
 
 ## Quick Start
 
+### Option 1: Run Test Suite First (Recommended)
+
+Validate the mathematical foundations before running the full prototype:
+
 ```bash
-# Clone and setup
+cd ghtest
+pip install torch numpy matplotlib
+
+# Run all tests
+./run_tests.sh
+```
+
+This validates:
+- Mathematical claims (holographic capacity, SAE, vector arithmetic, etc.)
+- Component integration (read/write, thought chains, persistence)
+- ~5 minutes total runtime
+
+See **[TESTING.md](TESTING.md)** for detailed test documentation.
+
+### Option 2: Run Full Prototype
+
+```bash
 cd ghtest
 pip install torch transformers
 
-# Run prototype
+# Run prototype with GPT-2
 python prototype.py
 ```
 
